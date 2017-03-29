@@ -1,0 +1,314 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Dam Removal Citations | Corpus Analysis</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-image="./img/NPS_Glines_Feb_7th_2012.jpeg"><h2>USGS Dam Removal Science Database</h2><br>
+				<h4>Corpus Analysis</h4></section>
+					<section data-markdown data-background-image="./img/NPS_Glines_Feb_7th_2012.jpeg">
+						<script type="text/template">
+							## Overview
+							This analysis is focused on exploring the corpus as a whole, which is built from ~170 individual documents. Majority of the exploration was treated as a bag-of-words so specific placement within text was not taken into consideration. The list of articles used is provided on the Resources page, any file marked with an "X" had difficulties processing and may not be included in the analysis.
+						</script>
+					</section>
+					<section data-markdown data-background-image="./img/NPS_Glines_Feb_7th_2012.jpeg">
+						<script type="text/template">
+							## Ngrams
+
+							#### Applied to the unprocessed corpus
+						</script>
+					</section>
+					<section data-markdown data-background-image="./img/NPS_Glines_Feb_7th_2012.jpeg">
+						<script type="text/template">
+							## Unigrams (raw text)
+
+							Note - "dam"
+
+							![](./img/raw_unigrams.png)
+						</script>
+					</section>
+					<section data-markdown data-background-image="./img/NPS_Glines_Feb_7th_2012.jpeg">
+						<script type="text/template">
+							## Bigrams (raw text)
+
+							Note - "dam removal" and "the dam"
+
+							![](./img/raw_bigrams.png)
+						</script>
+					</section>
+					<section data-markdown data-background-image="./img/NPS_Glines_Feb_7th_2012.jpeg">
+						<script type="text/template">
+							## Trigrams (raw text)
+
+							Note - "of the dam", "downstream of the" and "upstream of the"
+
+
+							![](./img/raw_trigrams.png)
+						</script>
+					</section>
+
+					<section data-markdown data-background-image="./img/NPS_Glines_Feb_7th_2012.jpeg">
+						<script type="text/template">
+							## Cleaning the corpus
+
+							* Remove non-letters
+
+							* Convert all uppercase characters to lowercase
+
+							* Remove English stopwords
+						</script>
+					</section>
+						<section data-markdown data-background-image="./img/NPS_Glines_Feb_7th_2012.jpeg">
+							<script type="text/template">
+								## Word Cloud
+
+								![](./img/wordcloud.png)
+							</script>
+						</section>
+					<section data-markdown data-background-image="./img/NPS_Glines_Feb_7th_2012.jpeg">
+						<script type="text/template">
+							## Top 20 Words
+
+
+							![](./img/topterms.png)
+						</script>
+					</section>
+					<section data-markdown data-background-image="./img/NPS_Glines_Feb_7th_2012.jpeg">
+						<script type="text/template">
+							## Bigrams
+
+							![](./img/bigrams.png)
+						</script>
+					</section>
+					<section data-markdown data-background-image="./img/NPS_Glines_Feb_7th_2012.jpeg">
+						<script type="text/template">
+							## Trigrams
+
+
+
+							![](./img/trigrams.png)
+						</script>
+					</section>
+
+					<section data-markdown data-background-image="./img/NPS_Glines_Feb_7th_2012.jpeg">
+						<script type="text/template">
+							## Resources
+
+							```text
+							O - Ahearn_Dahlgren_2005_Limnology and Oceanography.pdf
+							O - Amos_2008_Thesis.pdf
+							O - Ashley et al._2006_Environmental Monitoring and Assessment.pdf
+							O - Berthelote_2013_Thesis.pdf
+							O - Bountry_etal_2013_Reviews in Engineering Geology.pdf
+							O - Bowman_2001_Thesis.pdf
+							O - Brazell_Cole_2009_Journal of the Pennsylvania Academy of Science.pdf
+							O - Bulak_etal_2011_Report.pdf
+							O - Burdick,_Hightower_2006_Transactions of the American Fisheries Society.pdf
+							O - Burroughs_2003_Thesis.pdf
+							O - Burroughs_2007_Thesis_Ch2.pdf
+							O - Burroughs_2007_Thesis_Ch3.pdf
+							O - Burroughs_etal_2009_Geomorphology.pdf
+							O - Burroughs_etal_2010_TransactionsOfTheAmericanFisheriesSociety.pdf
+							X - 'latin-1' codec can't encode character '\u2010' in position 27: ordinal not in range(256) --- Bushaw‐Newton_etal_2003_JAWRA.pdf
+							O - Cannatelli_Curran_2012_Journal of Hydraulic Engineering.pdf
+							O - Cantwell_etal_2014_Environmental monitoring and assessment.pdf
+							O - Casper_etal_2006_Archiv fuer Hydrobiologie Supplement.pdf
+							O - Catalano_2002_Thesis.pdf
+							O - Catalano_etal_2007_North American Journal of Fisheries Management.pdf
+							O - Chaplin_etal_2005_Report.pdf
+							O - Chen_2012_Thesis.pdf
+							O - Cheng_Granata_2007_Water Resources Research.pdf
+							O - Chiu_etal_2013_Aquatic Ecology.pdf
+							O - Chung_etal_2008_Zoological Studies.pdf
+							O - Clayton-Niederman_Gilbreath_2005_Water Resources Center Archives.pdf
+							O - Compson_etal_2009_Hydrobiologia.pdf
+							O - Conlon_2014_Thesis.pdf
+							O - Conlon_2015_Thesis.pdf
+							O - Cooper_2011_Advances in Environmental Research.pdf
+							O - Cooper_2013_Report.pdf
+							O - Cui_etal_2014_Journal of Hydraulic Engineering.pdf
+							O - Curran_etal_2014_Report.pdf
+							O - DeShon_2010_Report.pdf
+							O - Dinger_2006_Thesis.pdf
+							O - Doucette_2009_Thesis.pdf
+							O - Doyle_etal_2003_Water Resources Research.pdf
+							O - Doyle_etal_2003b_Water Resources Research.pdf
+							O - Doyle_etal_2005_Geomorphology.pdf
+							O - Draut_Ritchie_2013_River Research and Applications.pdf
+							O - East_etal_2014_Geomorphology.pdf
+							O - Ellsworth_Martin_2012_Report.pdf
+							O - Ellsworth_VanderKooi_2011_Report.pdf
+							O - Engle_etal_2012_Report.pdf
+							O - Epstein_2009_Thesis.pdf
+							O - Evans_etal_2007_JAWRA.pdf
+							O - Evans_etal_2013_Reviews in Engineering Geology.pdf
+							O - Evans_Wilcox_2014_River Research and Applications.pdf
+							O - Farinacci_2009_Thesis.pdf
+							O - Feld_etal_2011_Advances in Ecological Research.pdf
+							O - Ferreri_2011_Report.pdf
+							O - Ferry_Miller_2003_Report.pdf
+							O - Fjeldstad_etal_2012_River Research and Applications.pdf
+							O - Fuller_etal_2011_Geomorphology.pdf
+							O - Gangloff_etal_2009_Alabama Mill Dam Inventory Final Report.pdf
+							O - Gangloff_etal_2011_Journal of the North American Benthological Society.pdf
+							O - Garcia_2012_Thesis.pdf
+							O - Gardner_etal_2011_River research and Applications.pdf
+							O - Gibson_etal_2011_Report.pdf
+							O - Gottgens_2009_Report.pdf
+							O - Granata_etal_2008_Journal of Hydraulic Engineering.pdf
+							O - Grant_etal_2008_World Environmental and Water Resources Congress.pdf
+							O - Greene_etal_2013_JAWRA.pdf
+							O - Greenwald_etal_2003_Report.pdf
+							O - Hansen_Hayes_2012_River Research and Applications.pdf
+							O - Harbold_etal_2013_Report.pdf
+							O - Harris_2008_Thesis.pdf
+							O - Harris_Evans_2014_Open Journal of Modern Hydrology.pdf
+							O - Heise_etal_2013_The Journal of the Mollusk Conservation Society.pdf
+							O - Helms_et al_2011_Journal of the North American Benthological Society.pdf
+							O - Hill_etal_1994_Association of Fish and Wildlife Agencies.pdf
+							O - Hirethota_etal_2005_Report.pdf
+							O - Hitt_etal_2012_Transactions of the American Fisheries Society.pdf
+							O - Hogg_2012_Thesis.pdf
+							O - Hogg_etal_2013_Transactions of the American Fisheries Society.pdf
+							O - Hogg_etal_2015_TAFS.pdf
+							O - Howard_etal_2007_Report.pdf
+							X - 'latin-1' codec can't encode character '\u0308' in position 23: ordinal not in range(256) --- Hörnström_2009_Thesis.pdf
+							O - Hutchison_2008_Thesis.pdf
+							O - Im_etal_2011_Ecological Engineering.pdf
+							O - Isaksson_2010_Thesis.pdf
+							O - Johnsen_2009_Thesis.pdf
+							O - Jolley_etal_2013_Report.pdf
+							O - Kanehl_etal_1997_North American Journal of Fisheries Management.pdf
+							O - Katopodis_etal_2006_International Journal of River Basin Management.pdf
+							O - Keith_2012_Thesis.pdf
+							O - Kibler_etal_2011_JAWRA.pdf
+							O - Kil_Bae_2012_Animal Cells and Systems.pdf
+							O - Kim_etal_2014_Journal of Water Resources and Protection.pdf
+							O - Knittel_2010_Thesis.pdf
+							O - Kornis_etal_2014_Aquatic Science.pdf
+							O - Kosky_etal_2004_Conf Proceedings.pdf
+							O - Krieger_Stearns_2007_Report.pdf
+							O - Lafrenz_etal_2013_Physical Geography.pdf
+							O - Lambing_Sando_2009_Report.pdf
+							O - Lasne_etal_2014_River Research and Applications.pdf
+							O - Lejon_2012_Thesis.pdf
+							O - Lenhart_2000_Thesis.pdf
+							O - Major_etal_2008_EOS.pdf
+							O - Major_etal_2010_Report.pdf
+							O - Major_etal_2012_Professional Paper.pdf
+							O - Maloney_etal_2008_Freshwater Biology.pdf
+							O - Marion - 2014 - South Atlantic Stream Fish Assemblages Multi-Scale Structuring Factors, Trait Associations and Channelization, and Respo.pdf
+							O - Marks_etal_2010_Restoration Ecology.pdf
+							O - Martin_etal_2013_Report.pdf
+							O - Matzek_2011_Thesis.pdf
+							O - Merritts_etal_2010_Report.pdf
+							O - Merritts_etal_2013_Reviews in Engineering Geology.pdf
+							O - Miller_Vizcaino_2004_Report.pdf
+							O - Mistak_2001_Thesis.pdf
+							O - Muehlbauer_etal_2009_Hydrobiologia.pdf
+							O - Neave_etal_2009_Australian Geographer.pdf
+							O - Nechvatal_2004_Thesis.pdf
+							O - Orr_etal_2006_Journal of the North American Benthological Society.pdf
+							O - Orr_etal_2008_River Research and Applications.pdf
+							O - Orr_Koenig_2006_Ecological restoration.pdf
+							O - Orr_Stanley_2006_River Research and Applications.pdf
+							O - Pearson_etal_2011_Water Resources Research.pdf
+							O - Peck_Kasper_2013_Reviews in Engineering Geology.pdf
+							O - Pittman_Matthews_2008_Report.pdf
+							O - Plante_etal_2009_International Association for Hydraulic Research.pdf
+							O - Plathe_2010_Thesis.pdf
+							O - Podolak_2012_Thesis.pdf
+							O - Poeppl_etal_2013_Research in Protected Areas.pdf
+							O - Pollard_Reed_2004_Hydrobiologia.pdf
+							O - Poulos_etal_2014_Environmental Management.pdf
+							O - Raabe_Hightower_2014_North American Journal of Fisheries Management.pdf
+							O - Raabe_Hightower_2014_Transactions of the American Fisheries Society.pdf
+							O - Randle_Lyons_1995_15th Annual USCOLD Lecture.pdf
+							O - Renofalt_etal_2013_River Research and Applications.pdf
+							O - Riggsbee_etal_2007_Water resources research.pdf
+							O - Riggsbee_etal_2012_River Research and Applications.pdf
+							O - Rogers_2006_Thesis.pdf
+							O - Rohdy_2013_Thesis.pdf
+							O - Roth_etal_2014_Earth and Planetary Science Letters.pdf
+							O - Rumschlag_Peck_2007_Journal of Great Lakes Research.pdf
+							O - Rye_2000_Building Partnerships.pdf
+							O - Sando_Lambing_2011_Report.pdf
+							O - Sawaske_Freyberg_2012_Geomorphology.pdf
+							O - Schmitz_etal_2009_Journal of environmental management.pdf
+							O - Sethi_etal_2004_Hydrobiologia.pdf
+							O - Sherman_2013_Thesis.pdf
+							O - Simons_etal_2011_UC Water Resources Collections and Archives.pdf
+							O - Slawson_2004_Thesis.pdf
+							O - Stanley_2007_River research and Applications.pdf
+							O - Stanley_etal_2002_Journal of the North American Benthological Society.pdf
+							O - Stephens_2014_Report.pdf
+							O - Stewart_2006_Thesis.pdf
+							O - Stillwater Science_2014_TechnicalMemorandum.pdf
+							O - Straub_2007_Thesis.pdf
+							O - Straub_Holmes_2007_World Environmental and Water Resources Congress.pdf
+							O - Thomas_Constantine_2014_River Research and Applications.pdf
+							O - Thomson_etal_2005_J N AM Benthol Soc.pdf
+							O - Tullos_etal_2010_World Environmental and Water Resources Congress.pdf
+							O - Tullos_etal_2013_Report.pdf
+							O - Tullos_etal_2014_PloS one.pdf
+							O - Tullos_Wang_2014_Earth Surface Processes and Landforms.pdf
+							O - Velinsky_etal_2006_Journal of the North American Benthological Society.pdf
+							X - 'latin-1' codec can't encode character '\u0301' in position 27: ordinal not in range(256) --- Vizcaíno_etal_Unknown.pdf
+							O - Walter_Tullos_2010_River research and applications.pdf
+							O - Wang_etal_2014_Journal of Mountain Science.pdf
+							O - Warrick_etal_2012_Eos.pdf
+							O - Whitener_2013_Thesis.pdf
+							O - Wilcox_etal_2014_Journal of Geophysical Research.pdf
+							O - Wildman_MacBroom_2005_Geomorphology.pdf
+							O - Williams_1977_Report.pdf
+							O - Young_Ishiga_2014_Environmental Earth Sciences.pdf
+							O - Young_Ishiga_2014_Environmental Monitoring and Assessment.pdf
+							O - Zunka_2011_Thesis.pdf
+							```
+
+							Image: https://prd-wret.s3-us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/styles/full_width/public/NPS_Glines_Feb_7th_2012.jpg?itok=CeT5srfP
+						</script>
+					</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
